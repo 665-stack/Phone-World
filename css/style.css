@@ -19,6 +19,7 @@ body {
 /* -------- seacrh area ---------- */
 .search-func {
     margin: 20px 0px 30px 0px;
+
 }
 
 #search-input {
@@ -41,4 +42,14 @@ body {
 
 .search-btn:hover {
     background-color: #845b33;
+}
+
+/* ======= search result area ========*/
+.perPhone {
+    background-color: #d9b692;
+    padding: 20px 0px 20px 0px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
 }
