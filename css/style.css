@@ -45,11 +45,20 @@ body {
 }
 
 /* ======= search result area ========*/
+
 .perPhone {
+    margin-top: 50px;
+}
+
+.perPhoneCard {
     background-color: #d9b692;
-    padding: 20px 0px 20px 0px;
-    margin: 10px;
+}
+
+.perPhoneDetails {
+    background-color: #684725;
+    color: wheat;
+}
+
+.perPhoneIMG {
     border-radius: 10px;
-    text-align: center;
-    width: 80%;
 }

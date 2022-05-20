@@ -22,11 +22,20 @@ const displayPhone = phones => {
     phones.forEach(phone => {
         console.log(phone);
         const div = document.createElement('div');
-        div.classList.add("perPhone")
+        div.classList.add("perPhone");
+        div.classList.add("col-lg-4");
+        div.classList.add("col-md-6");
+        div.classList.add("sm-12");
+
         div.innerHTML = `
-        <img src="${phone.image}" alt="">
-        <h4>${phone.phone_name}</h4>
-        <h6>${phone.brand}</h6>
+      <div class="card perPhoneCard py-2 pt-4 mx-auto" style="width: 18rem;">
+        <img src="${phone.image}" class="perPhoneIMG w-50 mx-auto" alt="...">
+             <div class="card-body text-center">
+                 <h4 class="card-title">${phone.phone_name}</h4>
+                 <h6 class="card-text">${phone.brand}</h6>
+                <button class="perPhoneDetails border-0 px-3 py-1 mt-2 rounded">See Details</button>
+            </div>
+       </div>
         
         `
         container.appendChild(div);
