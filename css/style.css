@@ -62,3 +62,17 @@ body {
 .perPhoneIMG {
     border-radius: 10px;
 }
+
+/* ============ phone details section */
+.phoneDetailsCard {
+    background-color: #e2b08c;
+}
+
+.details-section {
+    background-color: #c67d43;
+    color: wheat;
+}
+
+span {
+    font-weight: 600;
+}

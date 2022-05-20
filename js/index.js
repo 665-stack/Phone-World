@@ -52,5 +52,35 @@ const displayPhone = phones => {
 }
 const loadPhoneDetails = phoneId => {
     const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
-    console.log(url);
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayPhoneDetails(data.data))
+}
+const displayPhoneDetails = phone => {
+    console.log(phone);
+    const phoneDetails = document.getElementById('phone-details');
+    // clear previous phone details
+    phoneDetails.textContent = '';
+    const div = document.createElement('div');
+    div.innerHTML = `
+    <div class = "phoneDetailsCard card py-2 px-4 pt-4 mx-auto" style = "width:22rem;">
+       <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="">
+       <div class="card-body text-center">
+            <h5 class="card-title">${phone.name}</h5>
+            <h6 class="card-text py-2">${phone.releaseDate}</h6>
+            <h4 class="details-section  ">Details</h4>
+            <div class="text-start py-3">
+               <p> <span>DisplaySize</span> : ${phone.mainFeatures.displaySize}</p>
+               <p> <span>ChipSet</span> : ${phone.mainFeatures.chipSet}</p>
+               <p> <span>Memory</span> : ${phone.mainFeatures.memory}</p>
+               <p> <span>Storage</span> : ${phone.mainFeatures.storage}</p>
+               <p> <span>Sensors</span> : ${phone.mainFeatures.sensors}</p>
+            </div>
+
+
+       </div>
+    </div>
+    
+    `;
+    phoneDetails.appendChild(div);
 }
