@@ -1,0 +1,21 @@
+body {
+    background-color: #f7e4d7;
+}
+
+.favicon {
+    background-color: white;
+}
+
+.headline {
+    background-color: #684725;
+    color: wheat;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+}
+
+.logo {
+    width: 50px;
+    border-radius: 10px;
+    background-color: wheat;
+}
