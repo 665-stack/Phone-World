@@ -24,10 +24,10 @@ const displayPhone = phones => {
     const errorMassages = document.getElementById('errorMassages');
     container.textContent = '';
     if (phones) {
-        errorMassages.innerText = "Please enter phone model"
+        errorMassages.innerText = "No phone found"
     }
     phones?.forEach(phone => {
-        console.log(phone);
+        // console.log(phone.slug);
         const div = document.createElement('div');
         div.classList.add("perPhone");
         div.classList.add("col-lg-4");
@@ -35,12 +35,13 @@ const displayPhone = phones => {
         div.classList.add("sm-12");
 
         div.innerHTML = `
+        
       <div class="card perPhoneCard py-2 pt-4 mx-auto" style="width: 18rem;">
         <img src="${phone.image}" class="perPhoneIMG w-50 mx-auto" alt="...">
              <div class="card-body text-center">
                  <h4 class="card-title">${phone.phone_name}</h4>
                  <h6 class="card-text">${phone.brand}</h6>
-                <button class="perPhoneDetails border-0 px-3 py-1 mt-2 rounded">See Details</button>
+                <button onclick="loadPhoneDetails('${phone.slug}')" class="perPhoneDetails border-0 px-3 py-1 mt-2 rounded">See Details</button>
             </div>
        </div>
         
@@ -48,4 +49,8 @@ const displayPhone = phones => {
         errorMassages.innerText = "";
         container.appendChild(div);
     });
+}
+const loadPhoneDetails = phoneId => {
+    const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
+    console.log(url);
 }
