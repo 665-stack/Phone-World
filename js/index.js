@@ -20,13 +20,14 @@ const loadPhone = searchText => {
 // ====== display API's info ========
 const displayPhone = phones => {
     const container = document.getElementById('phones');
+    const first20Phones = phones.slice(0, 20)
     // error handle
     const errorMassages = document.getElementById('errorMassages');
     container.textContent = '';
     if (phones) {
         errorMassages.innerText = "No phone found"
     }
-    phones?.forEach(phone => {
+    first20Phones?.forEach(phone => {
         // console.log(phone.slug);
         const div = document.createElement('div');
         div.classList.add("perPhone");
