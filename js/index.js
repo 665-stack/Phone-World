@@ -1,7 +1,15 @@
+// spinner functionality
+const spinnerFunc = displayStyle => {
+    document.getElementById('spinner').style.display = displayStyle;
+}
 
 // get search keyword from input box
 const searchPhone = () => {
     const searchText = document.getElementById('search-input').value;
+
+    // display spinner
+    spinnerFunc('block')
+
     loadPhone(searchText);
 
     // clear search input box
@@ -50,6 +58,7 @@ const displayPhone = phones => {
         errorMassages.innerText = "";
         container.appendChild(div);
     });
+    spinnerFunc('none')
 }
 const loadPhoneDetails = phoneId => {
     const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;

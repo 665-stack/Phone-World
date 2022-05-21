@@ -81,3 +81,10 @@ span {
     background-color: #c67d43;
     color: wheat;
 }
+
+/* ======= spinner ========== */
+#spinner {
+    color: #684725;
+    display: none;
+
+}
