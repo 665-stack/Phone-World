@@ -57,7 +57,7 @@ const loadPhoneDetails = phoneId => {
         .then(data => displayPhoneDetails(data.data))
 }
 const displayPhoneDetails = phone => {
-    console.log(phone);
+    console.log(phone.others.Bluetooth);
     const phoneDetails = document.getElementById('phone-details');
     // clear previous phone details
     phoneDetails.textContent = '';
@@ -75,6 +75,14 @@ const displayPhoneDetails = phone => {
                <p> <span>Memory</span> : ${phone.mainFeatures.memory}</p>
                <p> <span>Storage</span> : ${phone.mainFeatures.storage}</p>
                <p> <span>Sensors</span> : ${phone.mainFeatures.sensors}</p>
+
+               <h6 class="others-details text-center"> Others</h6>
+               <p> <span>Bluetooth</span> : ${phone.others.Bluetooth}</p>
+               <p> <span>GPS</span> : ${phone.others.GPS}</p>
+               <p> <span>NFC</span> : ${phone.others.NFC}</p>
+               <p> <span>Radio</span> : ${phone.others.Radio}</p>
+               <p> <span>USB</span> : ${phone.others.USB}</p>
+               <p> <span>WLAN</span> : ${phone.others.WLAN}</p>
             </div>
 
 

@@ -76,3 +76,8 @@ body {
 span {
     font-weight: 600;
 }
+
+.others-details {
+    background-color: #c67d43;
+    color: wheat;
+}
