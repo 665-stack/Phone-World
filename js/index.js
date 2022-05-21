@@ -63,11 +63,11 @@ const displayPhoneDetails = phone => {
     phoneDetails.textContent = '';
     const div = document.createElement('div');
     div.innerHTML = `
-    <div class = "phoneDetailsCard card py-2 px-4 pt-4 mx-auto" style = "width:22rem;">
+    <div class = "phoneDetailsCard card py-2 px-4 pt-4 mx-auto" style = "width:20 rem;">
        <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="">
        <div class="card-body text-center">
             <h5 class="card-title">${phone.name}</h5>
-            <h6 class="card-text py-2">${phone.releaseDate}</h6>
+            <h6 class="card-text py-2">${phone.releaseDate ? phone.releaseDate : 'No release date'}</h6>
             <h4 class="details-section  ">Details</h4>
             <div class="text-start py-3">
                <p> <span>DisplaySize</span> : ${phone.mainFeatures.displaySize}</p>
