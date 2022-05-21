@@ -1,5 +1,6 @@
 body {
     background-color: #f7e4d7;
+    margin-bottom: 50px;
 }
 
 .headline {
@@ -63,7 +64,7 @@ body {
     border-radius: 10px;
 }
 
-/* ============ phone details section */
+/* ===== phone details section ===== */
 .phoneDetailsCard {
     background-color: #e2b08c;
 }
